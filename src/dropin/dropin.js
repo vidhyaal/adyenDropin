@@ -4,7 +4,7 @@ getOriginKey().then(originKey => {
         // 1. Create an instance of AdyenCheckout
         const checkout = new AdyenCheckout({
             environment: 'test',
-            originKey: "pub.v2.7814658006340126.aHR0cDovL2xvY2FsaG9zdDozMDAw.DCeeOiTfpBwtKc7ieW0zvVHaedH7JKbmA1SwcRvvRxc", // Mandatory. originKey from Costumer Area
+            originKey: "pub.v2.7814658006340126.aHR0cHM6Ly9kcm9waW5jYXJ0Lmhlcm9rdWFwcC5jb20v.55-cCXLUkVovyzMlMql-w2h_6FSBsazEllZPVEBjJbs", // Mandatory. originKey from Costumer Area
             paymentMethodsResponse,
 			
             //removePaymentMethods: ['paysafecard', 'c_cash']
