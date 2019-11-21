@@ -3,7 +3,7 @@ getOriginKey().then(originKey => {
     // 1. Create an instance of AdyenCheckout
     const checkout = new AdyenCheckout({
         environment: 'test',
-        originKey: "pub.v2.7814658006340126.aHR0cHM6Ly9kcm9waW5jYXJ0Lmhlcm9rdWFwcC5jb20vZHJvcGluLw.TxI-KFLvNE0NI5b53ew2Fa8edtAn-yf_TSuFZZXmMiw" // Mandatory. originKey from Costumer Area
+        originKey: "pub.v2.7814658006340126.aHR0cHM6Ly9kcm9waW5jYXJ0Lmhlcm9rdWFwcC5jb20.mAGo7XjRRRz1E13MxOA0a0GLzLhQQQE4dWhhqtG9cgY" // Mandatory. originKey from Costumer Area
     });
 
     // 2. Create and mount the Component
