@@ -24,16 +24,18 @@ getOriginKey().then(originKey => {
                 onSubmit: (state) => {
                      state.data;
                      state.isValid;
-                    var responseBody=makePayment(state.data);
-			console.log(responseBody);
-                   // alert("Response"+response.resultCode);
-			if(state.isValid){
+                    makePayment(state.data).then(function(response){
+		    	if(response.resultCode=='Authorised'){
 						dropin.setStatus('success');
 					dropin.setStatus('success', { message: 'Payment successful!' });}
 					else{
 						dropin.setStatus('error');
 						dropin.setStatus('error', { message: 'Something went wrong.'});
 					} 
+		    }).catch(error);
+			console.log(responseBody);
+                   // alert("Response"+response.resultCode);
+			
                 }
             }) 
             .mount('#dropin-container');
