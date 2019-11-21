@@ -26,6 +26,13 @@ getOriginKey().then(originKey => {
                      state.isValid;
                     makePayment(state.data);
                    // alert("Response"+response.resultCode);
+			if(state.isValid){
+						dropin.setStatus('success');
+					dropin.setStatus('success', { message: 'Payment successful!' });}
+					else{
+						dropin.setStatus('error');
+						dropin.setStatus('error', { message: 'Something went wrong.'});
+					} 
                 }
             }) 
             .mount('#dropin-container');
