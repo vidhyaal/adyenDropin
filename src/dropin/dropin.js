@@ -25,7 +25,7 @@ getOriginKey().then(originKey => {
                      state.data;
                      state.isValid;
                     makePayment(state.data).then(function(response){
-		    	if(response.resultCode=='Authorised'){
+		    	if(response.resultCode=='Authorised' || response.resultCode=='Received'){
 						dropin.setStatus('success');
 					dropin.setStatus('success', { message: 'Payment successful!' });}
 					else{
