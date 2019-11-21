@@ -24,7 +24,8 @@ getOriginKey().then(originKey => {
                 onSubmit: (state) => {
                      state.data;
                      state.isValid;
-                    makePayment(state.data);
+                    var responseBody=makePayment(state.data);
+			console.log(responseBody);
                    // alert("Response"+response.resultCode);
 			if(state.isValid){
 						dropin.setStatus('success');
